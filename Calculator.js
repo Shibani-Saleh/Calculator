@@ -1,71 +1,57 @@
-$('#9').click(function(){
-	$('#output').append('9')
-})
-$('#8').click(function(){
-	$('#output').append('8')
-})
-$('#7').click(function(){
-	$('#output').append('7')
-})
-$('#6').click(function(){
-	$('#output').append('6')
-})
-$('#5').click(function(){
-	$('#output').append('5')
-})
-$('#4').click(function(){
-	$('#output').append('4')
-})
-$('#3').click(function(){
-	$('#output').append('3')
-})
-$('#2').click(function(){
-	$('#output').append('2')
-})
-$('#1').click(function(){
-	$('#output').append('1')
-})
-$('#0').click(function(){
-	$('#output').append('0')
-})
-$('#plus').click(function(){
-	$('#output').append('+')
-})
-$('#equal').click(function(){
-	$('#output').append('=')
-})
-$('#minus').click(function(){
-	$('#output').append('-')
-})
-$('#divide').click(function(){
-	$('#output').append('÷')
-})
-$('#mult').click(function(){
-	$('#output').append('*')
+var input = "";
+var firstNum = "";
+var secondNum = "";
+var answer = "";
+
+$('.num').click(function(){
+	$('#result').text(input += $(this).text())
 })
 
-$('#clear').click(function(){
-	$('#output').remove()
-	$('#out').append('<output id="output"></output>')
-	
-})
-
-function operateOn(firstNumber, operation, secondNumber) {
-	var result;
-
-  if(operation === 0) {
-  	return result = firstNumber + secondNumber;
-  }
-  else if(operation === 1) {
-  	return result = firstNumber * secondNumber;
-  }
-  else if(operation === 2) {
-  	return result = firstNumber / secondNumber;
-  }
-  else if(operation === 3) {
-  	return result = firstNumber - secondNumber;
-  }
-  else {
-  	return 'Nothing to Operate On';
-  }
+function oper(){
+	var firstNum = input;
+	$('#result').empty()
+	$('.num').click(function(){
+		$('result').text(secondNum = secondNum + $(this).text())
+	});
 }
+
+$("#mult").click(function(){
+  if(input !== ""){
+    oper();
+  }
+});
+
+$("#equal").click(function(){
+  answer = firstNum * secondNum;
+  $("#result").text(answer);
+});
+
+$("#clear").click(function(){
+  input = "";
+  firstInput = "";
+  secondInput = "";
+  answer ="";
+  $("#result").empty(); 
+});
+
+
+// $('#plus').click(function(){
+// 	$('#display').append('+')
+// })
+// $('#equal').click(function(){
+// 	$('#display').append('=')
+// })
+// $('#minus').click(function(){
+// 	$('#display').append('-')
+// })
+// $('#divide').click(function(){
+// 	$('#display').append('÷')
+// })
+// $('#mult').click(function(){
+// 	$('#display').append('*')
+// })
+
+$("#delete").on("click",function(){
+	$('#display').empty(); 
+});
+
