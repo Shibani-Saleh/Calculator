@@ -45,7 +45,8 @@ $('#mult').click(function(){
 })
 
 $('#clear').click(function(){
-	$('#output').detach()
+	$('#output').remove()
+	$('#out').append('<output id="output"></output>')
 	
 })
 
