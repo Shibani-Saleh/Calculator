@@ -8,37 +8,42 @@
 	<link rel="stylesheet" type="text/css" href="Calculator.css">
 	<title>Simple Calculator</title>
 </head>
-<body>
+<body id="grad">
 	<center>
-	<div id="erase">
-	<button>Delete</button>
-	<button>Clear</button>
+	<div id="out">
+	<output id="output"></output>
+	</div>
+<div id="erase">
+	<button class="grid-container" id="delete">Delete</button>
+	<button class="grid-container" id="clear">Clear</button>
 </div>
-	<div id="operation">
-	<button>+</button>
-	<button>-</button>
-	<button>*</button>
-	<button>÷</button>
-	<button>=</button>
+<div id="operation">
+	<button class="grid-container"  id="plus">+</button>
+	<button class="grid-container"  id="minus">-</button>
+	<button class="grid-container"  id="mult">*</button>
+	<button class="grid-container"  id="divide">÷</button>
+	<button class="grid-container"  id="equal">=</button>
 </div>
 
-	<div id="numbers1">
-	<button>1</button>
-	<button>2</button>
-	<button>3</button>
+<div id="numbers1">
+	<button class="grid-container" id="7">7</button>
+	<button class="grid-container" id="8">8</button>
+	<button class="grid-container" id="9">9</button>
 </div>
-	<div id="numbers2">
-	<button>4</button>
-	<button>5</button>
-	<button>6</button>
+<div id="numbers2">
+	<button class="grid-container" id="4">4</button>
+	<button class="grid-container" id="5">5</button>
+	<button class="grid-container" id="6">6</button>
  </div>
- 	<div id="numbers3">
-	<button>7</button>
-	<button>8</button>
-	<button>9</button>
+ <div id="numbers3">
+	<button class="grid-container" id="1">1</button>
+	<button class="grid-container" id="2">2</button>
+	<button class="grid-container" id="3">3</button>
 </div>
-	<button>0</button>
-</div>
+<div id="zero">
+	<button class="grid-container" id="0">0</button>
+</div> 
+<div> <img id="img" src="https://funwithalgebracom.files.wordpress.com/2019/05/cropped-watermark1.png"></div>
 	</center>
 <script type="text/javascript" src="Calculator.js"></script>
 </body>
