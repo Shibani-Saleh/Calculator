@@ -11,9 +11,10 @@
   height: 80px;
   border: solid black 1px;
   box-shadow: 1px 2px;
-  background-color: yellow;
+  background-color: white;
   text-align: center;
   box-sizing: border-box;
+  font-size: 25px;
   	
 }
 .grid-container {
@@ -22,4 +23,11 @@
   padding: 20px;
   font-size: 30px;
   text-align: center
+}
+#grad {
+  background-image: linear-gradient(90deg, lightblue, white);
+}
+#img {
+  height: 400px;
+  width: 50%;
 }
