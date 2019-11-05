@@ -2,16 +2,20 @@ $(document).ready(function(){
 	function calculator(){
 
     var sum = "";
+
     var input = $('#result');
     var counter = 0;
 
     $("#result").html('Enter a number');
 
     $(".numbers").click(function() {
+
     	var number = $(this).attr('value');
       $(".operators").attr('disabled', false);
     	sum += number;
+
     	$('#result').html(sum);
+
     });
 
        
@@ -21,6 +25,7 @@ $(document).ready(function(){
 
       sum += operator;
 
+
       $("#result").html(sum);
       $('.operators').attr('disabled', true);
     });
@@ -28,6 +33,7 @@ $(document).ready(function(){
     $("#equal").click(function() {
       $(".operators").attr('disabled', false);
       var total =  eval(sum);
+
 
       if(total % 1 !== 0) {
         total = total.toFixed(4);
@@ -40,6 +46,7 @@ $(document).ready(function(){
       sum = "";
       $(".operators").attr('disabled', false);
       $("#result").html('Enter a number');
+
     });
 
     };
