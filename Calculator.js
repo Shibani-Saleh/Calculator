@@ -1,49 +1,47 @@
-$(document).ready(function () {
-  function calculator() {
+$(document).ready(function(){
+	function calculator(){
+
     var sum = "";
-    var len;
-    //var arr= [];
-    var operators = ["+", "-", "*", "/", "%"];
-    var input = $('#result')
-    $(".num").click(function () {
-      var number = $(this).attr('value');
-      sum += number;
-      // arr.push(number);
-      $('#result').html(sum)
-      len = input.innerHTML.split("");
-      //console.log(len);
-      //console.log(arr);
+    var input = $('#result');
+    var counter = 0;
+
+    $("#result").html('Enter a number');
+
+    $(".numbers").click(function() {
+    	var number = $(this).attr('value');
+      $(".operators").attr('disabled', false);
+    	sum += number;
+    	$('#result').html(sum);
     });
-    $(".operators").click(function (e) {
-      e.preventDefault();
+
+       
+    $(".operators").click(function(event) {
+      event.preventDefault();
       var operator = $(this).attr('value');
+
       sum += operator;
-      //arr.push(number);
-      $("#result").html(sum);
-      len = input.innerHTML;
-      // if(/(?=(\D{2}))/g.test(sum)) {
-      sum = len.substring(0, len.length - 1);
-      $("#result").html(sum);
-      // }
-      // len = input.innerHTML.split("");
-      //console.log(len);
 
-      //console.log(arr);
-
+      $("#result").html(sum);
+      $('.operators').attr('disabled', true);
     });
 
-    $("#equal").click(function () {
-      var total = eval(sum);
-      // $("#result").attr('value', total);
-      $("#result").html(total % 1 != 0 ? total.toFixed(2) : total);
+    $("#equal").click(function() {
+      $(".operators").attr('disabled', false);
+      var total =  eval(sum);
+
+      if(total % 1 !== 0) {
+        total = total.toFixed(4);
+      }
+
+      $("#result").html(total)
     });
 
-    $("#clear").click(function () {
+    $("#clear").click(function() {
       sum = "";
-      arr = [];
-      $("#result").html(0);
+      $(".operators").attr('disabled', false);
+      $("#result").html('Enter a number');
     });
 
-  };
-  calculator();
+    };
+    calculator();
 });
