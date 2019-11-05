@@ -48,6 +48,7 @@ $(document).ready(function(){
       }
 
       $("#result").html(total)
+      sum = total;
     });
     //This function acts when you press the button C and resets every thing.
     $("#clear").click(function() {
