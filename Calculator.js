@@ -41,7 +41,7 @@ $(document).ready(function(){
     $("#equal").click(function() {
       $(".operators").attr('disabled', false);
       //Using the eval() function to evaluate the string, convert it to numbers and evaluate it. 
-      var total =  eval(sum);
+      var total =  paraseInt(sum);
       //This line of code if the result has a decimal answer then it shows the first four numbers after the decimal sign.
       if(total % 1 !== 0) {
         total = total.toFixed(4);
