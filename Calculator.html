@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -8,38 +9,56 @@
 	<link rel="stylesheet" type="text/css" href="Calculator.css">
 	<title>Simple Calculator</title>
 </head>
-<body>
+<body id="body">
 	<center>
-	<div id="erase">
-	<button>Delete</button>
-	<button>Clear</button>
-</div>
-	<div id="operation">
-	<button>+</button>
-	<button>-</button>
-	<button>*</button>
-	<button>÷</button>
-	<button>=</button>
-</div>
+	<h1>Simple Calculator</h1>
+	<hr>
+<div id="calculator">
 
-	<div id="numbers1">
-	<button>1</button>
-	<button>2</button>
-	<button>3</button>
+	<div id="result"></div>
+	<div id="par">
+
+<button class="grid-container operators"  value="/100" id="per" accesskey="%">%</button>
+	<button class="numbers parentheses" value="(" accesskey="(">(</button>
+	<button class="numbers parentheses" value=")" accesskey=")">)</button>
+	<button class="grid-container" id="clear" accesskey="c">C</button>
+	</div>
+<div id="numbers1">
+
+	<button class="grid-container  numbers" value="7" id="7" accesskey="7">7</button>
+	<button class="grid-container  numbers" value="8" id="8" accesskey="8">8</button>
+	<button class="grid-container  numbers" value="9" id="9" accesskey="9">9</button>
+	<button class="operators" value="**" accesskey="p">P</button>
 </div>
-	<div id="numbers2">
-	<button>4</button>
-	<button>5</button>
-	<button>6</button>
+<div id="numbers2">
+	<button class="grid-container  numbers" value="4" id="4" accesskey="4">4</button>
+	<button class="grid-container  numbers" value="5" id="5" accesskey="5">5</button>
+	<button class="grid-container  numbers" value="6" id="6" accesskey="6">6</button>
+	<button class="operators"  value="+" id="plus" accesskey="+">+</button>
  </div>
- 	<div id="numbers3">
-	<button>7</button>
-	<button>8</button>
-	<button>9</button>
+ <div id="numbers3">
+	<button class="grid-container  numbers" value="1" id="a" accesskey="1">1</button>
+	<button class="grid-container  numbers" value="2" id="2" accesskey="2">2</button>
+	<button class="grid-container  numbers" value="3" id="3" accesskey="3">3</button>
+	<button class="operators"  value="-" id="minus" accesskey="-">-</button>
 </div>
-	<button>0</button>
+<div id="zero">
+	
+	<button class="grid-container  operators" value="." accesskey=".">.</button>
+	<button class="grid-container  numbers" value="0" id="0" accesskey="0">0</button>
+	<button class="operators numbers" value="1/" id="divideBy" accesskey="x">1/X</button>
+	<button class="operators"  value="*" id="mult" accesskey="*">*</button>
 </div>
+<div id="eq">
+		<button id="equal" accesskey="=">=</button>
+		<button class="operators" id="sqrt" value="Math.sqrt(" accesskey="s">√</button>
+		<button class="operators"  value="/" id="divide" accesskey="/">÷</button>	
+</div>
+</div> 
+<div> <img id="img" src="https://funwithalgebracom.files.wordpress.com/2019/05/cropped-watermark1.png"></div>
 	</center>
 <script type="text/javascript" src="Calculator.js"></script>
+<hr>
+<footer>All rights are reserved, &copy Abdlrrahman Shibani and Sofian Saleh.</footer>
 </body>
 </html>
