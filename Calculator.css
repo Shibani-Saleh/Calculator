@@ -45,6 +45,7 @@ h1 {
   width:65px;
   height: 65px;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .grid-container:hover {
@@ -65,6 +66,7 @@ h1 {
   width:65px;
   height: 65px;
   font-weight: bold;
+  border-radius: 5px;
 }
 .operators:hover{
   background-color: #ed6100;
@@ -79,6 +81,7 @@ h1 {
   text-align: center;
   height: 65px;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 #equal:hover {
@@ -94,6 +97,7 @@ h1 {
   width:65px;
   height: 65px;
   font-weight: bold;
+  border-radius: 5px;
 }
 .parentheses:hover{
   background-color: #ed6100;
